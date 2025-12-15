@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FLOWA | Marketing & Design Advertising</title>
+<meta name="description" content="FLOWA Marketing & Design Advertising. Where strategy meets creativity. We design brands that flow naturally.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+--mint:#65C5B0;
+--mint-soft:#B2CFCE;
+--peach:#F9D2B6;
+--peach-deep:#FABE8E;
+--purple:#7C79AF;
+--navy:#1F315E;
+--ink:#0B0F1A;
+--paper:#FAFDFC;
+--radius:20px;
+--shadow:0 20px 40px rgba(31,49,94,.14);
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+margin:0;
+font-family:Montserrat,system-ui;
+color:var(--ink);
+background:
+radial-gradient(1200px 700px at 10% 5%,rgba(101,197,176,.20),transparent 60%),
+radial-gradient(900px 650px at 92% 8%,rgba(124,121,175,.20),transparent 55%),
+radial-gradient(900px 700px at 70% 95%,rgba(250,190,142,.26),transparent 55%),
+var(--paper);
+overflow-x:hidden;
+}
+
+.container{width:min(1120px,92vw);margin:auto}
+
+/* global flow */
+section{
+padding:90px 0;
+position:relative;
+overflow:hidden;
+}
+section::before{
+content:"";
+position:absolute;
+top:-40%;
+left:-30%;
+width:520px;
+height:520px;
+background:radial-gradient(circle,rgba(101,197,176,.18),transparent 70%);
+}
+section::after{
+content:"";
+position:absolute;
+bottom:-45%;
+right:-35%;
+width:620px;
+height:620px;
+background:radial-gradient(circle,rgba(250,190,142,.22),transparent 70%);
+}
+section>.container{position:relative;z-index:1}
+
+/* header */
+header{
+position:sticky;top:0;z-index:10;
+background:rgba(250,253,252,.85);
+backdrop-filter:blur(10px);
+border-bottom:1px solid rgba(31,49,94,.08)
+}
+.nav{
+display:flex;align-items:center;justify-content:space-between;
+padding:14px 0
+}
+.brand{display:flex;align-items:center;gap:12px;font-weight:700;color:var(--navy)}
+.brand img{width:44px;height:44px}
+nav a{
+margin:0 10px;
+text-decoration:none;
+color:rgba(46,52,64,.85);
+font-weight:500;
+font-size:14px
+}
+
+/* buttons */
+.btn{
+display:inline-block;
+padding:14px 28px;
+border-radius:999px;
+background:linear-gradient(135deg,var(--mint),var(--purple));
+color:white;
+font-weight:600;
+text-decoration:none;
+box-shadow:var(--shadow);
+transition:transform .3s ease,box-shadow .3s ease;
+}
+.btn:hover{
+transform:translateY(-3px);
+box-shadow:0 30px 60px rgba(31,49,94,.22);
+}
+
+/* hero */
+.hero{
+padding:120px 0 110px;
+}
+.hero h1{
+font-size:56px;
+line-height:1.05;
+color:var(--navy);
+max-width:720px;
+}
+.hero p{
+max-width:620px;
+font-size:16px;
+line-height:1.7;
+color:rgba(46,52,64,.85)
+}
+
+/* wave divider */
+.wave{
+position:absolute;
+left:0;
+right:0;
+bottom:-1px;
+width:100%;
+height:140px;
+}
+
+/* typography */
+h2{
+font-size:34px;
+color:var(--navy);
+margin-bottom:14px
+}
+.section-sub{
+max-width:640px;
+font-size:15px;
+line-height:1.7;
+color:rgba(46,52,64,.8);
+margin-bottom:28px
+}
+
+/* grids */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:24px
+}
+
+/* cards */
+.card{
+background:rgba(255,255,255,.9);
+border-radius:var(--radius);
+padding:28px;
+border:1px solid rgba(31,49,94,.1);
+box-shadow:var(--shadow);
+transition:transform .35s ease,box-shadow .35s ease;
+}
+.card:hover{
+transform:translateY(-6px);
+box-shadow:0 28px 60px rgba(31,49,94,.20);
+}
+.card strong{color:var(--navy)}
+
+/* about highlight */
+#about{
+background:
+linear-gradient(
+135deg,
+rgba(101,197,176,.22),
+rgba(124,121,175,.22),
+rgba(250,190,142,.28)
+);
+}
+
+/* packages */
+.package{
+background:linear-gradient(135deg,rgba(101,197,176,.20),rgba(124,121,175,.18),rgba(250,190,142,.18));
+border-radius:calc(var(--radius) + 6px);
+padding:30px;
+border:1px solid rgba(31,49,94,.1);
+box-shadow:var(--shadow);
+}
+.price{
+display:inline-block;
+margin-top:12px;
+padding:8px 14px;
+border-radius:999px;
+background:rgba(178,207,206,.35);
+color:var(--navy);
+font-weight:700
+}
+
+/* table */
+.table{
+width:100%;
+border-collapse:collapse;
+margin-top:30px;
+background:rgba(255,255,255,.9);
+border-radius:var(--radius);
+overflow:hidden;
+box-shadow:var(--shadow)
+}
+.table th,.table td{
+padding:16px;
+border-bottom:1px solid rgba(31,49,94,.08)
+}
+.table th{
+background:rgba(178,207,206,.24);
+color:var(--navy);
+font-size:13px
+}
+
+footer{
+padding:50px 0;
+text-align:center;
+font-size:13px;
+color:rgba(46,52,64,.7)
+}
+
+@media(max-width:900px){
+.hero h1{font-size:42px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <div class="brand">
+      <img src="assets/logo.png" alt="FLOWA logo">
+      FLOWA
+    </div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#packages">Packages</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h1>Where strategy meets creativity.<br>We design brands that flow naturally.</h1>
+    <p>
+      Welcome to FLOWA Marketing & Design Advertising.
+      Great design is the foundation of every successful brand.
+      We help businesses build clean, smart, relaxed brand identities that connect with audiences
+      and create a calm, consistent visual presence across all platforms.
+    </p>
+    <br>
+    <a class="btn" href="#contact">Start your project</a>
+  </div>
+
+  <svg class="wave" viewBox="0 0 1200 120" preserveAspectRatio="none">
+    <path d="M0,60 C200,120 400,0 600,60 800,120 1000,0 1200,60 L1200,120 L0,120 Z"
+          fill="rgba(101,197,176,.28)"/>
+  </svg>
+</section>
+
+<section id="about">
+  <div class="container">
+    <h2>About FLOWA</h2>
+    <p class="section-sub">
+      At FLOWA, we bring creativity, strategy, and a client-focused approach to every project.
+      Our work blends thoughtful design with practical marketing solutions.
+    </p>
+    <div class="grid">
+      <div class="card"><strong>Why Choose Us</strong><br><br>Experience, creativity, and real collaboration that respects your goals and budget.</div>
+      <div class="card"><strong>Our Vision</strong><br><br>To create meaningful brands that flow naturally with people, businesses, and modern digital spaces.</div>
+      <div class="card"><strong>Mission & Goal</strong><br><br>Deliver high-quality branding and marketing design that helps businesses stand out with clarity and confidence, and build long-term partnerships.</div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="container">
+    <h2>Our Services</h2>
+    <p class="section-sub">
+      A comprehensive range of branding and marketing design services to elevate your brand and engage your customers.
+    </p>
+    <div class="grid">
+      <div class="card">Branding & Logo Design</div>
+      <div class="card">Brand Identity Systems</div>
+      <div class="card">Social Media Graphics & Templates</div>
+      <div class="card">Marketing Collateral</div>
+      <div class="card">Website Design</div>
+      <div class="card">Packaging & Advertising Design</div>
+      <div class="card">Presentation Design</div>
+      <div class="card">Consultation & Strategy</div>
+    </div>
+  </div>
+</section>
+
+<section id="packages">
+  <div class="container">
+    <h2>Service Packages</h2>
+    <p class="section-sub">
+      Clear packages for a fast, calm, professional brand launch and consistent marketing design.
+    </p>
+    <div class="grid">
+      <div class="package">
+        <strong>Starter Brand Package</strong>
+        <p>Perfect for new businesses needing a strong visual identity to launch.</p>
+        <div class="price">AUD 1,200</div>
+      </div>
+      <div class="package">
+        <strong>Social Media Boost Package</strong>
+        <p>Ideal for businesses wanting consistent, branded social content.</p>
+        <div class="price">AUD 900 / month</div>
+      </div>
+      <div class="package">
+        <strong>Marketing Collateral Package</strong>
+        <p>Great for events, promotions, and print campaigns.</p>
+        <div class="price">AUD 1,500</div>
+      </div>
+      <div class="package">
+        <strong>Website Launch Package</strong>
+        <p>Professional online presence with responsive design.</p>
+        <div class="price">AUD 3,500</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing">
+  <div class="container">
+    <h2>À la Carte Services & Pricing</h2>
+    <table class="table">
+      <tr><th>Service</th><th>Description</th><th>Price (AUD)</th></tr>
+      <tr><td>Logo Design</td><td>Custom logo with concepts and revisions</td><td>$300–$1,200</td></tr>
+      <tr><td>Brand Identity Package</td><td>Logo, colors, typography, guidelines</td><td>$1,000–$3,500</td></tr>
+      <tr><td>Social Media Graphics</td><td>Single post or monthly packages</td><td>$30/post or $300–$1,000/month</td></tr>
+      <tr><td>Marketing Collateral</td><td>Flyers, brochures, posters</td><td>$150–$800/item</td></tr>
+      <tr><td>Website Design (Basic)</td><td>1–5 page responsive website</td><td>$1,000–$5,000</td></tr>
+      <tr><td>Email Newsletter Template</td><td>Custom email design</td><td>$200–$800</td></tr>
+      <tr><td>Packaging Design</td><td>Product packaging and labels</td><td>$500–$2,000</td></tr>
+      <tr><td>Advertising Design</td><td>Digital or print ads</td><td>$100–$600</td></tr>
+      <tr><td>Presentation Design</td><td>PowerPoint or Google Slides decks</td><td>$300–$1,200</td></tr>
+    </table>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <h2>Contact FLOWA</h2>
+    <p class="section-sub">
+      Ready to elevate your brand? Let’s work together to bring your brand vision to life.
+    </p>
+    <p>Email: designbestflow@gmail.com<br>
+    Phone: +61 423 967 272<br>
+    Instagram: @flowa.design.au</p>
+  </div>
+</section>
+
+<footer>
+FLOWA Marketing & Design Advertising • Australia
+</footer>
+
+</body>
+</html>
